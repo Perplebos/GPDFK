@@ -260,9 +260,42 @@ class Game {
 }
 
 class Host {
+
+  spin = new Spin()
+  constructor(let) {
+    AvLet = availableLetters;
+    this.let = let;
+  }
   sayHi(players) {
     const playersNames = players.map((item) => item.name);
     alert("Hello! " + playersNames.join(", "));
+  }
+  CommercialBreak() {
+    alert("А сейчас реклама")
+    //И здесь функция для отображения рекламы
+  }
+  NextMove() {
+    alert("Крутите барабан")
+    //функция для отображения того как крутится барабан
+  }
+  ResultDrum() {
+    alert("Сектор") + //результат барабана
+      alert("Выбирайте букву");
+    chooseLetter()
+  }
+  WinWords() {
+
+  }
+  RightLetter() {
+    alert("Откройте букву" + this.let)//пробный вариант с alert
+    //функция для открытия буквы
+  }
+  NotRightLetter() {
+    alert("Буквы" + this.let + "в слове нет!")//пробный вариант с alert
+    NextMove()
+  }
+  render() {
+    playersField.innerHTML += `<img src="images/${this.name}.png">`;
   }
 }
 
