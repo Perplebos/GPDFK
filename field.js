@@ -260,8 +260,9 @@ class Game {
 }
 
 class Host {
-
+  #spin;
   spin = new Spin()
+
   constructor(let) {
     AvLet = availableLetters;
     this.let = let;
@@ -276,11 +277,13 @@ class Host {
   }
   NextMove() {
     alert("Крутите барабан")
+    const randSpin = this.#spin.getField();
     //функция для отображения того как крутится барабан
   }
   ResultDrum() {
-    alert("Сектор") + //результат барабана
-      alert("Выбирайте букву");
+    const randSpin = this.#spin.getField();
+    alert("Сектор") + randSpin;
+    alert("Выбирайте букву");
     chooseLetter()
   }
   WinWords() {
@@ -298,7 +301,6 @@ class Host {
     playersField.innerHTML += `<img src="images/${this.name}.png">`;
   }
 }
-
 const game = new Game("Family");
 
 go.addEventListener("click", game.run.bind(game));
