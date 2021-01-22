@@ -260,12 +260,11 @@ class Game {
 }
 
 class Host {
-  #spin;
-  spin = new Spin()
+
 
   constructor(let) {
-    AvLet = availableLetters;
-    this.let = let;
+    
+    
   }
   sayHi(players) {
     const playersNames = players.map((item) => item.name);
@@ -284,7 +283,7 @@ class Host {
     const randSpin = this.#spin.getField();
     alert("Сектор") + randSpin;
     alert("Выбирайте букву");
-    chooseLetter()
+   
   }
   WinWords() {
 
@@ -295,7 +294,7 @@ class Host {
   }
   NotRightLetter() {
     alert("Буквы" + this.let + "в слове нет!")//пробный вариант с alert
-    NextMove()
+    
   }
   render() {
     playersField.innerHTML += `<img src="images/${this.name}.png">`;
